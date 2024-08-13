@@ -1,275 +1,234 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Portfólio - Ricardo Amaral</title>
+    <title>Portfólio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            background: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        /* Header */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            z-index: 1000;
         }
-        #wrapper {
+
+        #header .inner {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        header {
-            background: #4a4a4a;
+
+        #header .logo {
+            font-size: 1.5em;
+            text-decoration: none;
             color: #fff;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        header h1 {
-            margin: 0;
-            font-size: 2em;
+
+        #nav {
+            display: flex;
         }
-        nav ul {
+
+        #nav ul {
             list-style: none;
-            padding: 0;
             margin: 0;
-            text-align: center;
+            padding: 0;
+            display: flex;
         }
-        nav ul li {
-            display: inline;
+
+        #nav ul li {
             margin: 0 10px;
         }
-        nav ul li a {
+
+        #nav ul li a {
+            text-decoration: none;
             color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            transition: color 0.3s;
-        }
-        nav ul li a:hover {
-            color: #f8f8f8;
-        }
-        section {
-            margin: 20px 0;
-        }
-        .section-header {
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .section-header h2 {
-            margin: 0;
-            color: #333;
-        }
-        .features, .posts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .features article, .posts article {
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            flex: 1 1 calc(33% - 40px);
-            max-width: calc(33% - 40px);
-            transition: transform 0.3s;
-        }
-        .features article:hover, .posts article:hover {
-            transform: translateY(-5px);
-        }
-        .features article h3, .posts article h3 {
-            margin-top: 0;
-            color: #333;
-        }
-        .contact {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-        .contact li {
-            margin: 10px 0;
-        }
-        .contact a {
-            color: #4a90e2;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-        .button {
-            background: #4a90e2;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            font-size: 1em;
-            transition: background 0.3s;
-        }
-        .button:hover {
-            background: #357abd;
-        }
-        footer {
-            text-align: center;
             padding: 10px;
-            background: #4a4a4a;
-            color: #fff;
-            margin-top: 20px;
+            display: block;
+        }
+
+        #nav ul li a:hover {
+            background: #555;
+        }
+
+        /* Adjusting the main content to account for fixed header */
+        #wrapper {
+            padding-top: 60px; /* Adjust according to header height */
         }
     </style>
 </head>
-<body>
+<body class="is-preload">
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo"><strong>Portfólio</strong> Ricardo Amaral</a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#sobre-mim">Sobre Mim</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#experiencias">Trabalho de Conclusão de Curso</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#contatos">Contatos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Header -->
-        <header>
-            <h1>Portfólio - Ricardo Amaral</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">Sobre Mim</a></li>
-                    <li><a href="#skills">Habilidades</a></li>
-                    <li><a href="#projects">Projetos</a></li>
-                    <li><a href="#contact">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
-
         <!-- Main -->
         <div id="main">
             <div class="inner">
-
                 <!-- Sobre mim -->
-                <section id="about">
-                    <div class="section-header">
-                        <h2>Sobre Mim</h2>
-                    </div>
-                    <p>Meu nome é Ricardo Amaral e atualmente sou estudante da Comunidade DS, com o objetivo de desenvolver meus conhecimentos em Ciências de Dados, como Python, SQL, Machine Learning, entre outras ferramentas e conceitos para solucionar problemas de negócios de empresas.</p>
-                    <p>Meu último trabalho envolveu a garantia da confiabilidade de informações utilizando Excel, SQL e Power BI. Durante meu estágio na área de Smart Manufacturing, participei de projetos para a implementação de novas tecnologias da indústria 4.0 e criei um Dashboard para acompanhamento de falhas, utilizando o Power BI e Power Apps.</p>
-                    <p>Na formação em engenharia elétrica, atuei na Empresa Júnior como RH e presidente. Meu TCC abordou a tecnologia com o título "Protótipo de um sistema de iluminação e tomada inteligente com o uso da plataforma Arduino e internet das coisas", publicado em uma revista online.</p>
+                <section id="sobre-mim">
+                    <header class="main">
+                        <h1>Sobre mim</h1>
+                    </header>
+                    <h2 id="content">Meu nome é Ricardo Amaral...</h2>
+                    <p>Atualmente estudante da Comunidade DS com o objetivo de desenvolver meus conhecimentos em Ciências de Dados, como por exemplo: python, SQL, Machine Learning, dentre outras ferramentas e conceitos para solucionar problemas de negócios de empresas.</p>
+                    <p>Relacionado a área de dados, meu último trabalho foi acompanhar e garantir a confiabilidade de informações utilizando Excel, SQL e o Microsoft Power BI como suporte.</p>
+                    <p>Durante meu estágio na área de Smart Manufacturing participei de projetos para implementação de novas tecnologias da indústria 4.0 que facilitariam correções nos problemas no processo produtivo. A principal atividade que exerci foi na criação de um Dashboard para acompanhamento de falhas. As principais ferramentas foram o Microsoft Power bi e o Power app.</p>
+                    <p>Durante a formação em engenharia elétrica participei da Empresa júnior nos cargos de RH e como presidente. Meu TCC foi voltado para o tema de tecnologia cujo título foi "Protótipo de um sistema de iluminação e tomada inteligente com o uso da plataforma Arduino e internet das coisas". Este artigo foi publicada em uma revista online.</p>
                 </section>
 
                 <!-- Habilidades -->
-                <section id="skills">
-                    <div class="section-header">
+                <section id="habilidades">
+                    <header class="major">
                         <h2>Habilidades</h2>
-                    </div>
+                    </header>
                     <div class="features">
                         <article>
-                            <h3>Linguagens de Programação</h3>
-                            <ul>
-                                <li>Python com foco em análise de dados.</li>
-                                <li>Linguagem SQL.</li>
-                                <li>Conceitos de ETL.</li>
-                                <li>Pensamento Estratégico.</li>
-                            </ul>
+                            <span class="icon fa-gem"></span>
+                            <div class="content">
+                                <h3>Linguagens de Programação</h3>
+                                <ul>
+                                    <li>Python com foco em análise de dados.</li>
+                                    <li>Linguagem SQL.</li>
+                                    <li>Conceitos de ETL.</li>
+                                    <li>Pensamento Estratégico.</li>
+                                </ul>
+                            </div>
                         </article>
                         <article>
-                            <h3>Estatística e Machine Learning</h3>
-                            <ul>
-                                <li>Estatística Descritiva.</li>
-                                <li>Algoritmos de Regressão, Classificação e Clusterização.</li>
-                                <li>Métricas de Performance de algoritmos.</li>
-                                <li>Sklearn.</li>
-                            </ul>
+                            <span class="icon solid fa-paper-plane"></span>
+                            <div class="content">
+                                <h3>Estatística e Machine Learning</h3>
+                                <ul>
+                                    <li>Estatística Descritiva.</li>
+                                    <li>Algoritmos de Regressão, Classificação e Clusterização.</li>
+                                    <li>Métricas de Performance de algortimos ( RMSE, MSE, MAE, MAPE, Confusion Matrix, Precision, Recall, ROC Curve, Silhouette Score e R2 ).</li>
+                                    <li>Sklearn.</li>
+                                </ul>
+                            </div>
                         </article>
                         <article>
-                            <h3>Visualização de Dados</h3>
-                            <ul>
-                                <li>Power BI.</li>
-                                <li>Matplotlib, Seaborn e Plotly.</li>
-                                <li>Streamlit.</li>
-                            </ul>
+                            <span class="icon solid fa-rocket"></span>
+                            <div class="content">
+                                <h3>Visualização de Dados</h3>
+                                <ul>
+                                    <li>Power BI.</li>
+                                    <li>Matplotlib, Seaborn e Plotly.</li>
+                                    <li>Streamlit.</li>
+                                </ul>
+                            </div>
                         </article>
                         <article>
-                            <h3>Engenharia de Software</h3>
-                            <ul>
-                                <li>Github.</li>
-                                <li>Streamlit Cloud.</li>
-                                <li>SQLite3 Database.</li>
-                            </ul>
+                            <span class="icon solid fa-signal"></span>
+                            <div class="content">
+                                <h3>Engenharia de Software</h3>
+                                <ul>
+                                    <li>Github.</li>
+                                    <li>Streamlit Cloud.</li>
+                                    <li>SQLite3 Database.</li>
+                                </ul>
+                            </div>
                         </article>
                     </div>
                 </section>
 
-                <!-- Projetos -->
-                <section id="projects">
-                    <div class="section-header">
+                <!-- Trabalho de Conclusão de Curso -->
+                <section id="experiencias">
+                    <header class="main">
+                        <h1>Trabalho de Conclusão de Curso</h1>
+                    </header>
+                    <h2 id="content">Protótipo de um sistema de iluminação e tomada inteligente com o uso da plataforma Arduino e internet das coisas</h2>
+                    <p>A proposta deste trabalho foi a de pesquisar e compreender os conceitos de Internet das coisas, Domótica, microcontroladores e plataforma Arduino para desenvolver uma maquete para simular uma residência e ser um sistema de baixo custo para o controle de um circuito de iluminação e uma tomada.</p>
+                    <p>Este trabalho foi publicado na revista "brazilian journals". Para ver o trabalho completo, basta acessar o link em "saiba mais" abaixo.</p>
+                    <li><a href="https://ojs.brazilianjournals.com.br/ojs/index.php/BRJD/article/view/31502" class="button">Saiba Mais...</a></li>
+                </section>
+
+                <!-- Projetos Ciência de Dados -->
+                <section id="projetos">
+                    <header class="major">
                         <h2>Projetos em Ciência de Dados</h2>
-                    </div>
+                    </header>
                     <div class="posts">
                         <article>
-                            <a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="image">
-                                <img src="images/nasa_unplash.jpg" alt="Imagem de Nasa na Unsplash" />
-                            </a>
-                            <h3>Utilizando Machine Learning para Clusterizar Clientes de um Ecommerce</h3>
-                            <p>Utilizando algoritmos de Machine Learning para categorizar clientes com base em padrões de comportamento de compra, permitindo personalização das estratégias de marketing e atendimento.</p>
+                            <a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="image"><img src="images/nasa_unplash.jpg" alt="" width="250" height="300" /></a>
+                            <p>Foto de Nasa na Unsplash</p>
+                            <h3>Utilizando Machine Learning para clusterizar(agrupar) clientes de um Ecommerce</h3>
+                            <p> Utilizando algoritmos de Machine Learning para categorizar os clientes com base em padrões de comportamento de compra. Essa abordagem permitirá uma personalização mais eficaz das estratégias de marketing e um atendimento mais direcionado, contribuindo para a otimização da experiência do cliente e o aumento da eficiência operacional.</p>
                             <ul>
                                 <li>Python: Pandas, Numpy, Seaborn.</li>
-                                <li>Algoritmos de Clusterização: K-means, GMM, Hierarchical Clustering e DBSCAN</li>
+                                <li>Algoritmos de clusterização: K-means, GMM, Hierarchical Clustering e DBSCAN</li>
                                 <li>Embedding com Decision Tree</li>
-                                <li>Visualização e Métrica de Silhueta</li>
+                                <li>Visualização e métrica de silhueta</li>
                                 <li>Github</li>
                             </ul>
-                            <a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="button">Saiba Mais...</a>
+                            <ul class="actions">
+                                <li><a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="button">Saiba Mais...</a></li>
+                            </ul>
                         </article>
                         <article>
-                            <a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="image">
-                                <img src="images/health_insurance_unplash.jpg" alt="Imagem de Alexander Sinn na Unsplash" />
-                            </a>
-                            <h3>Identificando Clientes de Alto Potencial Para Seguro de Saúde</h3>
-                            <p>Direcionando esforços de vendas para clientes propensos a comprar um seguro, melhorando a lucratividade geral com base em dados de clientes existentes.</p>
+                            <a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="image"><img src="images/health_insurance_unplash.jpg" alt="" width="250" height="300" /></a>
+                            <p>Foto de Alexander Sinn na Unsplash</p>
+                            <h3>Utilizando Machine Learning para Identificar Clientes de Alto Potencial Para Seguro de Saúde</h3>
+                            <p> O principal objetivo desse projeto é direcionar os esforços de vendas da empresa para os clientes mais promissores, maximizando o retorno sobre o investimento em campanhas de marketing e aumentando a probabilidade de conversão de vendas.</p>
                             <ul>
-                                <li>Python: Pandas, Numpy, Scikit-learn.</li>
-                                <li>Algoritmos de Classificação: Regressão Logística, KNN, Random Forest, Decision Tree e Naive Bayes</li>
-                                <li>Visualização com Matplotlib e Power BI</li>
+                                <li>Python: Pandas, Numpy, Seaborn.</li>
+                                <li>Algoritmos de Regressão Logística e Classificação.</li>
+                                <li>Métricas de performance: Confusion Matrix, Precision, Recall e ROC Curve</li>
                                 <li>Github</li>
                             </ul>
-                            <a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="button">Saiba Mais...</a>
-                        </article>
-                        <article>
-                            <a href="https://github.com/Ricardoamp/recomendacao_filmes/blob/main/README.md" class="image">
-                                <img src="images/rec_movies_unsplash.jpg" alt="Imagem de Alex Green na Unsplash" />
-                            </a>
-                            <h3>Sistema de Recomendação de Filmes</h3>
-                            <p>Desenvolvimento de um sistema de recomendação de filmes baseado em algoritmos de similaridade e filtragem colaborativa, para fornecer sugestões personalizadas.</p>
-                            <ul>
-                                <li>Python: Pandas, Numpy, Scikit-learn.</li>
-                                <li>Algoritmos de Recomendação: KNN, SVD, Content-based Filtering.</li>
-                                <li>Visualização com Matplotlib e Streamlit</li>
-                                <li>Github</li>
+                            <ul class="actions">
+                                <li><a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="button">Saiba Mais...</a></li>
                             </ul>
-                            <a href="https://github.com/Ricardoamp/recomendacao_filmes/blob/main/README.md" class="button">Saiba Mais...</a>
                         </article>
                     </div>
                 </section>
 
-                <!-- Contato -->
-                <section id="contact">
-                    <div class="section-header">
-                        <h2>Contato</h2>
-                    </div>
+                <!-- Contatos -->
+                <section id="contatos">
+                    <header class="major">
+                        <h2>Contatos</h2>
+                    </header>
                     <ul class="contact">
-                        <li><a href="mailto:ricardo.amaral@outlook.com" class="icon solid fa-envelope">ricardo.amaral@outlook.com</a></li>
-                        <li><a href="https://github.com/Ricardoamp" class="icon fa-github">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/ricardo-amarel/" class="icon fa-linkedin">LinkedIn</a></li>
+                        <li class="fa-envelope"><a href="mailto:ricardomaraleng@gmail.com">ricardomaraleng@gmail.com</a></li>
+                        <li class="fa-phone">(11) 96426-7035</li>
+                        <li class="fa-linkedin"><a href="https://www.linkedin.com/in/ricardo-amral-227515141/" target="_blank">LinkedIn</a></li>
+                        <li class="fa-github"><a href="https://github.com/Ricardoamp" target="_blank">GitHub</a></li>
                     </ul>
                 </section>
-
-                <!-- Footer -->
-                <footer>
-                    <p>&copy; 2024 Ricardo Amaral. Todos os direitos reservados.</p>
-                </footer>
 
             </div>
         </div>
 
     </div>
 
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
 </body>
