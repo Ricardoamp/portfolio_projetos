@@ -7,33 +7,38 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             color: #333;
-            line-height: 1.6;
+            background: #f5f5f5;
+            margin: 0;
+            padding: 0;
         }
         #wrapper {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-        header#header {
-            text-align: center;
+        header {
+            background: #282c34;
+            color: #fff;
             padding: 20px 0;
-            background-color: #f4f4f4;
+            text-align: center;
         }
-        header#header a {
+        header a {
+            color: #61dafb;
             text-decoration: none;
-            color: #333;
             font-size: 2em;
         }
-        h1, h2 {
-            color: #0056b3;
-        }
         .section-header {
-            background: #f4f4f4;
+            background: #fff;
             padding: 10px;
-            border-radius: 5px;
+            border-radius: 8px;
             margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .section-header h1, .section-header h2 {
+            margin: 0;
+            color: #282c34;
         }
         .features, .posts {
             display: flex;
@@ -44,13 +49,17 @@
             flex: 1;
             background: #fff;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .features article:hover, .posts article:hover {
+            transform: translateY(-5px);
         }
         .posts .image img {
             max-width: 100%;
-            height: auto;
+            border-radius: 8px;
         }
         .contact {
             list-style: none;
@@ -60,25 +69,30 @@
         .contact li {
             margin: 10px 0;
         }
-        .contact .icon {
-            margin-right: 8px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #f4f4f4;
-            margin-top: 20px;
+        .contact a {
+            color: #61dafb;
+            text-decoration: none;
+            font-size: 1.2em;
         }
         .button {
-            background: #0056b3;
+            background: #61dafb;
             color: #fff;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             display: inline-block;
+            font-size: 1em;
+            transition: background 0.3s;
         }
         .button:hover {
-            background: #004494;
+            background: #21a1f1;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #282c34;
+            color: #fff;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -87,14 +101,14 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
+        <!-- Header -->
+        <header>
+            <a href="index.html">Portfólio - Ricardo Amaral</a>
+        </header>
+
         <!-- Main -->
         <div id="main">
             <div class="inner">
-
-                <!-- Header -->
-                <header id="header">
-                    <a href="index.html" class="logo"><strong>Portfólio</strong> Ricardo Amaral</a>
-                </header>
 
                 <!-- Sobre mim -->
                 <section>
@@ -113,50 +127,38 @@
                     </header>
                     <div class="features">
                         <article>
-                            <span class="icon fa-gem"></span>
-                            <div class="content">
-                                <h3>Linguagens de Programação</h3>
-                                <ul>
-                                    <li>Python com foco em análise de dados.</li>
-                                    <li>Linguagem SQL.</li>
-                                    <li>Conceitos de ETL.</li>
-                                    <li>Pensamento Estratégico.</li>
-                                </ul>
-                            </div>
+                            <h3>Linguagens de Programação</h3>
+                            <ul>
+                                <li>Python com foco em análise de dados.</li>
+                                <li>Linguagem SQL.</li>
+                                <li>Conceitos de ETL.</li>
+                                <li>Pensamento Estratégico.</li>
+                            </ul>
                         </article>
                         <article>
-                            <span class="icon solid fa-paper-plane"></span>
-                            <div class="content">
-                                <h3>Estatística e Machine Learning</h3>
-                                <ul>
-                                    <li>Estatística Descritiva.</li>
-                                    <li>Algoritmos de Regressão, Classificação e Clusterização.</li>
-                                    <li>Métricas de Performance de algoritmos.</li>
-                                    <li>Sklearn.</li>
-                                </ul>
-                            </div>
+                            <h3>Estatística e Machine Learning</h3>
+                            <ul>
+                                <li>Estatística Descritiva.</li>
+                                <li>Algoritmos de Regressão, Classificação e Clusterização.</li>
+                                <li>Métricas de Performance de algoritmos.</li>
+                                <li>Sklearn.</li>
+                            </ul>
                         </article>
                         <article>
-                            <span class="icon solid fa-rocket"></span>
-                            <div class="content">
-                                <h3>Visualização de Dados</h3>
-                                <ul>
-                                    <li>Power BI.</li>
-                                    <li>Matplotlib, Seaborn e Plotly.</li>
-                                    <li>Streamlit.</li>
-                                </ul>
-                            </div>
+                            <h3>Visualização de Dados</h3>
+                            <ul>
+                                <li>Power BI.</li>
+                                <li>Matplotlib, Seaborn e Plotly.</li>
+                                <li>Streamlit.</li>
+                            </ul>
                         </article>
                         <article>
-                            <span class="icon solid fa-signal"></span>
-                            <div class="content">
-                                <h3>Engenharia de Software</h3>
-                                <ul>
-                                    <li>Github.</li>
-                                    <li>Streamlit Cloud.</li>
-                                    <li>SQLite3 Database.</li>
-                                </ul>
-                            </div>
+                            <h3>Engenharia de Software</h3>
+                            <ul>
+                                <li>Github.</li>
+                                <li>Streamlit Cloud.</li>
+                                <li>SQLite3 Database.</li>
+                            </ul>
                         </article>
                     </div>
                 </section>
@@ -180,9 +182,8 @@
                     <div class="posts">
                         <article>
                             <a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="image">
-                                <img src="images/nasa_unplash.jpg" alt="" width="250" height="300" />
+                                <img src="images/nasa_unplash.jpg" alt="Imagem de Nasa na Unsplash" />
                             </a>
-                            <p>Foto de Nasa na Unsplash</p>
                             <h3>Utilizando Machine Learning para Clusterizar Clientes de um Ecommerce</h3>
                             <p>Utilizando algoritmos de Machine Learning para categorizar clientes com base em padrões de comportamento de compra, permitindo personalização das estratégias de marketing e atendimento.</p>
                             <ul>
@@ -196,9 +197,8 @@
                         </article>
                         <article>
                             <a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="image">
-                                <img src="images/health_insurance_unplash.jpg" alt="" width="250" height="300" />
+                                <img src="images/health_insurance_unplash.jpg" alt="Imagem de Alexander Sinn na Unsplash" />
                             </a>
-                            <p>Foto de Alexander Sinn na Unsplash</p>
                             <h3>Identificando Clientes de Alto Potencial Para Seguro de Saúde</h3>
                             <p>Direcionando esforços de vendas para clientes propensos a comprar um seguro, melhorando a lucratividade geral com base em dados de clientes existentes.</p>
                             <ul>
@@ -212,9 +212,8 @@
                         </article>
                         <article>
                             <a href="https://github.com/Ricardoamp/recomendacao_filmes/blob/main/README.md" class="image">
-                                <img src="images/rec_movies_unsplash.jpg" alt="" width="250" height="300" />
+                                <img src="images/rec_movies_unsplash.jpg" alt="Imagem de Alex Green na Unsplash" />
                             </a>
-                            <p>Foto de Alex Green na Unsplash</p>
                             <h3>Sistema de Recomendação de Filmes</h3>
                             <p>Desenvolvimento de um sistema de recomendação de filmes baseado em algoritmos de similaridade e filtragem colaborativa, para fornecer sugestões personalizadas.</p>
                             <ul>
