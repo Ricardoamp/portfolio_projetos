@@ -1,86 +1,38 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Portfólio</title>
+    <title>Generic - Sistema de Recomendação</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-        /* Header */
+        /* Estilo para o botão */
         #header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-
-        #header .inner {
-            max-width: 1200px;
-            margin: 0 auto;
             display: flex;
-            justify-content: space-between;
             align-items: center;
         }
-
-        #header .logo {
+        .menu-button {
+            font-size: 1em;
+            margin-right: 5px;
+            padding: 8px 8px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .menu-button:hover {
+            background-color: #555;
+        }
+        .logo {
             font-size: 1.5em;
             text-decoration: none;
-            color: #fff;
-        }
-
-        #nav {
-            display: flex;
-        }
-
-        #nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        #nav ul li {
-            margin: 0 10px;
-        }
-
-        #nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px;
-            display: block;
-        }
-
-        #nav ul li a:hover {
-            background: #555;
-        }
-
-        /* Adjusting the main content to account for fixed header */
-        #wrapper {
-            padding-top: 60px; /* Adjust according to header height */
+            color: inherit;
         }
     </style>
 </head>
 <body class="is-preload">
-
-    <!-- Header -->
-    <header id="header">
-        <div class="inner">
-            <a href="index.html" class="logo"><strong>Portfólio</strong> Ricardo Amaral</a>
-            <nav id="nav">
-                <ul>
-                    <li><a href="#sobre-mim">Sobre Mim</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#experiencias">Trabalho de Conclusão de Curso</a></li>
-                    <li><a href="#projetos">Projetos</a></li>
-                    <li><a href="#contatos">Contatos</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -88,183 +40,77 @@
         <!-- Main -->
         <div id="main">
             <div class="inner">
-                <!-- Sobre mim -->
-                <section id="sobre-mim">
-                    <header class="main">
-                        <h1>Sobre mim</h1>
-                    </header>
-                    <h2 id="content">Meu nome é Ricardo Amaral...</h2>
-                    <p>Atualmente estudante da Comunidade DS com o objetivo de desenvolver meus conhecimentos em Ciências de Dados, como por exemplo: python, SQL, Machine Learning, dentre outras ferramentas e conceitos para solucionar problemas de negócios de empresas.</p>
-                    <p>Relacionado a área de dados, meu último trabalho foi acompanhar e garantir a confiabilidade de informações utilizando Excel, SQL e o Microsoft Power BI como suporte.</p>
-                    <p>Durante meu estágio na área de Smart Manufacturing participei de projetos para implementação de novas tecnologias da indústria 4.0 que facilitariam correções nos problemas no processo produtivo. A principal atividade que exerci foi na criação de um Dashboard para acompanhamento de falhas. As principais ferramentas foram o Microsoft Power bi e o Power app.</p>
-                    <p>Durante a formação em engenharia elétrica participei da Empresa júnior nos cargos de RH e como presidente. Meu TCC foi voltado para o tema de tecnologia cujo título foi "Protótipo de um sistema de iluminação e tomada inteligente com o uso da plataforma Arduino e internet das coisas". Este artigo foi publicada em uma revista online.</p>
-                </section>
 
-                <!-- Habilidades -->
-                <section id="habilidades">
-                    <header class="major">
-                        <h2>Habilidades</h2>
-                    </header>
-                    <div class="features">
-                        <article>
-                            <span class="icon fa-gem"></span>
-                            <div class="content">
-                                <h3>Linguagens de Programação</h3>
-                                <ul>
-                                    <li>Python com foco em análise de dados.</li>
-                                    <li>Linguagem SQL.</li>
-                                    <li>Conceitos de ETL.</li>
-                                    <li>Pensamento Estratégico.</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article>
-                            <span class="icon solid fa-paper-plane"></span>
-                            <div class="content">
-                                <h3>Estatística e Machine Learning</h3>
-                                <ul>
-                                    <li>Estatística Descritiva.</li>
-                                    <li>Algoritmos de Regressão, Classificação e Clusterização.</li>
-                                    <li>Métricas de Performance de algortimos ( RMSE, MSE, MAE, MAPE, Confusion Matrix, Precision, Recall, ROC Curve, Silhouette Score e R2 ).</li>
-                                    <li>Sklearn.</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article>
-                            <span class="icon solid fa-rocket"></span>
-                            <div class="content">
-                                <h3>Visualização de Dados</h3>
-                                <ul>
-                                    <li>Power BI.</li>
-                                    <li>Matplotlib, Seaborn e Plotly.</li>
-                                    <li>Streamlit.</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article>
-                            <span class="icon solid fa-signal"></span>
-                            <div class="content">
-                                <h3>Engenharia de Software</h3>
-                                <ul>
-                                    <li>Github.</li>
-                                    <li>Streamlit Cloud.</li>
-                                    <li>SQLite3 Database.</li>
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+                <!-- Header -->
+                <header id="header">
+                    <!-- Adicionando o botão "Voltar ao Menu" -->
+                    <a href="index.html" class="menu-button">Voltar ao Menu</a>
+                </header>
 
-                <!-- Trabalho de Conclusão de Curso -->
-                <section id="experiencias">
-                    <header class="main">
-                        <h1>Trabalho de Conclusão de Curso</h1>
-                    </header>
-                    <h2 id="content">Protótipo de um sistema de iluminação e tomada inteligente com o uso da plataforma Arduino e internet das coisas</h2>
-                    <p>A proposta deste trabalho foi a de pesquisar e compreender os conceitos de Internet das coisas, Domótica, microcontroladores e plataforma Arduino para desenvolver uma maquete para simular uma residência e ser um sistema de baixo custo para o controle de um circuito de iluminação e uma tomada.</p>
-                    <p>Este trabalho foi publicado na revista "brazilian journals". Para ver o trabalho completo, basta acessar o link em "saiba mais" abaixo.</p>
-                    <li><a href="https://ojs.brazilianjournals.com.br/ojs/index.php/BRJD/article/view/31502" class="button">Saiba Mais...</a></li>
-                </section>
-
-				<!-- Projetos Ciência de dados-->
+                <!-- Content -->
                 <section>
-                    <header class="major">
-                        <h2>Projetos em Ciência de Dados</h2>
+                    <header class="main">
+						<h3>Sistema de Recomendação by Ricardo Amaral</h3>
+                        <h1>Processamento de Linguagem Natural (PLN) para Extrair Recomendações a Partir das Descrições Textuais dos Produtos</h1>
                     </header>
-                    <div class="posts">
-						<article>
-                            <a href="https://github.com/Ricardoamp/sistema_recomendacao/blob/main/README.md" class="image"><img src="images/amazonrecomenda.jpg" alt=""width="250" height="300" /></a>
-                            <p>Foto de Christian Wiediger na Unsplash</p>
-                            <h3>Processamento de Linguagem Natural (PLN) para extrair recomendações a partir das descrições textuais dos produtos</h3>
-                            <p> Este projeto é um sistema de recomendação de produtos utilizando um dataset da Amazon, baseado em técnicas de ciência de dados e aprendizado de máquina. O foco principal está na utilização de Processamento de Linguagem Natural (PLN) para extrair recomendações a partir das descrições textuais dos produtos. </p>
-                            <ul>
-                                <li>Python: Pandas, Scikit-learn, Streamlit.</li>
-                                <li>Processamento de Texto: Tokenização, Stemming</li>
-                                <li>Criação do modelo: Vetorização, Cálculo de Similaridade</li>
-                                <li>Visualização no streamlit.io</li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="https://github.com/Ricardoamp/sistema_recomendacao/blob/main/README.md" class="button">Saiba Mais...</a></li>
-                            </ul>
-                        </article>	
-                        <article>
-                            <a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="image"><img src="images/nasa_unplash.jpg" alt=""width="250" height="300" /></a>
-                            <p>Foto de Nasa na Unsplash</p>
-                            <h3>Utilizando Machine Learning para clusterizar(agrupar) clientes de um Ecommerce</h3>
-                            <p> Utilizando algoritmos de Machine Learning para categorizar os clientes com base em padrões de comportamento de compra. Essa abordagem permitirá uma personalização mais eficaz das estratégias de marketing e um atendimento mais direcionado, contribuindo para a otimização da experiência do cliente e o aumento da eficiência operacional.</p>
-                            <ul>
-                                <li>Python: Pandas, Numpy, Seaborn.</li>
-                                <li>Algoritmos de clusterização: K-means, GMM, Hierarchical Clustering e DBSCAN</li>
-                                <li>Embedding com Decision Tree</li>
-                                <li>Visualização e métrica de silhueta</li>
-                                <li>Github</li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="https://github.com/Ricardoamp/fidelidade-clusterizacao/blob/main/README.md" class="button">Saiba Mais...</a></li>
-                            </ul>
-                        </article>	
-                        <article>
-                            <a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="image"><img src="images/health_insurance_unplash.jpg" alt=""width="250" height="300" /></a>
-                            <p>Foto de Alexander Sinn na Unsplash</p>
-                            <h3>Utilizando Machine Learning para Identificar Clientes de Alto Potencial Para Seguro de Saúde</h3>
-                            <p> O principal objetivo desse projeto é direcionar os esforços de vendas da empresa para os clientes mais propensos a comprar um seguro, eliminando chamadas desnecessárias e melhorando a lucratividade geral. Para alcançar esse objetivo, o modelo foi treinado com dados coletados de clientes existentes que já possuem seguro de saúde, o que proporciona insights valiosos sobre o comportamento dos consumidores.</p>
-                            <ul>
-                                <li>Python: Pandas, Numpy, Seaborn.</li>
-                                <li>Algoritmos de machine learning: Logistic Regression, Random Forest Regressor</li>
-                                <li>Análise de dados e Visualização </li>
-                                <li>Github</li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="https://github.com/Ricardoamp/teste_ap_render/blob/main/README.md" class="button">Saiba Mais...</a></li>
-                            </ul>
-                        </article>										
-                        <article>
-                            <a href="https://github.com/Ricardoamp/rossmann_predict/blob/main/README.md" class="image"><img src="images/predicao_vendas_unplash.jpg" alt=""width="250" height="300" /></a>
-                            <p>Foto de Stephen Dawson na Unsplash</p>
-                            <h3>Previsão de Vendas com algortmos de Machine Learning</h3>
-                            <p> o objetivo de realizar uma previsão de vendas das lojas Rossmann para as próximos 6 semanas.</p>
-                            <p> Para realizar essa previsão, o projeto utiliza algoritmos de machine learning. Esses algoritmos são treinados com os dados históricos de vendas, buscando identificar relações e tendências que possam ajudar a prever as vendas futuras.</p>
-                            <ul>
-                                <li>Python: Pandas, Numpy, Seaborn.</li>
-                                <li>Algoritmos de machine learning: Linear Regression, Random Forest Regressor, XGBoost Regressor</li>
-                                <li>Analise de dado e Visualização </li>
-                                <li>Github</li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="https://github.com/Ricardoamp/rossmann_predict/blob/main/README.md" class="button">Saiba Mais...</a></li>
-                            </ul>
-                        </article>
-                        <article>
-                            <a href="https://github.com/Ricardoamp/ensaio_machine_learning/blob/main/README.md" class="image"><img src="images/ensaio_machine_unplash.jpg" alt=""width="250" height="300" /></a>
-                            <p>Foto de Kevin Ku na Unsplash</p>
-                            <h3>Ensaio de Machine Learning</h3>
-                            <p>Nesse projeto, foram explorados os principais conceitos do treinamento, ajuste de parâmetros e limiares entre overfitting e underfitting de vários algoritmos de Machine Learning dentro das tarefas de classificação,regressão e agrupamento, através de um ensaio de Machine Learning.</p>
-                            <ul>
-                                <li>Python e Scikit-learn.</li>
-                                <li>Algoritmos de classificação: KNN, Decision Tree, Random Forest e Logistic Regression.</li>
-                                <li>Métricas de performance: Accuracy, Precision, Recall e F1-Score.</li>
-                                <li>Algoritmos de regressão: Linear Regression, Decision Tree Regressor, Random Forest Regressor, Polinomial Regression, Linear Regression Lasso, Linear Regression Ridge, Linear Regression Elastic Net, Polinomial Regression Lasso, Polinomial Regression Ridge e Polinomial Regression Elastic Net.</li>
-                                <li>Métricas de performance: R2, MSE, RMSE, MAE e MAPE.</li>
-                                <li>Algoritmos de agrupamento: K-Means e Affinity Propagation.</li>
-                                <li>Métricas de performance: Silhouette Score.</li>
-                            </ul>
-                            <ul class="actions">
-                                <li><a href="https://github.com/Ricardoamp/ensaio_machine_learning/blob/main/README.md" class="button">Saiba Mais...</a></li>
-                            </ul>
-                        </article>										
-                                    
-                    </div>
-                </section>
 
-                <!-- Contatos -->
-                <section id="contatos">
-                    <header class="major">
-                        <h2>Contatos</h2>
-                    </header>
-                    <ul class="contact">
-                        <li class="fa-envelope"><a href="mailto:ricardo.amp12@gmail.com">ricardo.amp12@gmail.com</a></li>
-                        <li class="icon brands fa-linkedin"><a href="https://www.linkedin.com/in/ricardo-amp/" target="_blank">https://www.linkedin.com/in/ricardo-amp/</a></li>
-                        <li class="icon brands fa-github"><a href="https://github.com/Ricardoamp" target="_blank">https://github.com/Ricardoamp</a></li>
+                    <span class="image main"><img src="images/amazonrecomenda.jpg" alt="" width="300" height="400" /></span>
+
+                    <p style="text-align: center; color: #888; font-size: 0.9em;">
+                        Foto de <a href="https://unsplash.com/pt-br/@christianw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color: #888;">Christian Wiediger</a> na <a href="https://unsplash.com/pt-br/fotografias/smartphone-samsung-galaxy-preto-exibindo-o-logotipo-da-amazon-rymh7EZPqRs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color: #888;">Unsplash</a>
+                    </p>
+                    <p>Este projeto é um sistema de recomendação de produtos utilizando um dataset da Amazon, baseado em técnicas de ciência de dados e aprendizado de máquina. O foco principal está na utilização de Processamento de Linguagem Natural (PLN) para extrair recomendações a partir das descrições textuais dos produtos. As técnicas de PLN são empregadas para analisar e transformar o texto dos produtos em uma forma que possibilite a comparação e recomendação de produtos semelhantes. O processo segue o modelo CRISP-DM, uma metodologia padrão para a mineração de dados, adaptada para transformar dados textuais em recomendações relevantes.</p>
+
+                    <hr class="major" />
+
+                    <h2>1. Entendimento do Negócio</h2>
+                    <p>O objetivo deste projeto é desenvolver um sistema de recomendação que sugira produtos semelhantes com base nas preferências do usuário. Isso é útil para ajudar os consumidores a encontrar produtos relacionados e aumentar a satisfação e as vendas.</p>
+
+                    <hr class="major" />
+
+                    <h2>2. Entendimento dos Dados</h2>
+                    <p>Os dados são obtidos de um arquivo CSV que contém informações sobre produtos, incluindo:</p>
+                    <ul>
+                        <li>product_id: Identificador único do produto.</li>
+                        <li>product_name: Nome do produto.</li>
+                        <li>category: Categoria do produto.</li>
+                        <li>about_product: Descrição do produto.</li>
+                        <li>review_title: Título da avaliação.</li>
+                        <li>review_content: Conteúdo da avaliação.</li>
+                    </ul>
+
+                    <h3>Objetivo</h3> 
+                    <p>Transformar essas informações em uma forma que possa ser usada para calcular a similaridade entre produtos e gerar recomendações. </p>
+
+                    <hr class="major" />
+
+                    <h2>3. Preparação dos Dados</h2>
+                    <h3>Processamento de Texto</h3>
+
+                    <ul>
+                        <li>Tokenização: Divide o texto em palavras.</li>
+                        <li>Stemming: Reduz as palavras às suas raízes para padronizar o texto.</li>
+                        <li>Criação de Tags: Combina informações de diferentes colunas para criar uma representação textual unificada dos produtos.</li>
+                    </ul>
+
+                    <hr class="major" />
+
+                    <h2>4. Modelagem</h2>
+                    <ul>
+                        <li>Vetorização de Texto: Utiliza o CountVectorizer para transformar descrições dos produtos em vetores.</li>
+                        <li>Cálculo de Similaridade: Calcula a similaridade entre produtos usando a métrica de similaridade do cosseno, o que permite identificar produtos similares com base na sua descrição.</li>
+                        <li>Recomendação: Com base na similaridade calculada, o sistema sugere produtos semelhantes ao selecionado pelo usuário.</li>
+                    </ul>
+
+                    <hr class="major" />
+                    <h2>5. Avaliação</h2>
+                    <p>O modelo é avaliado com base na qualidade das recomendações geradas. As recomendações são verificadas para garantir que os produtos sugeridos sejam realmente relevantes e semelhantes ao produto escolhido pelo usuário.</p>
+
+                    <hr class="major" />
+                    <h2>6. Implementação</h2>
+                    <p>O aplicativo é implementado com Streamlit, que fornece uma interface interativa para o usuário.</p>
+                    <ul class="actions">
+                        <li><a href="https://sistemarecomendacao.streamlit.app/" class="button">Visualização no Streamlit.io</a></li>
                     </ul>
                 </section>
 
@@ -272,13 +118,6 @@
         </div>
 
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
