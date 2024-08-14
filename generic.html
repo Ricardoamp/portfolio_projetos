@@ -1,102 +1,129 @@
 <!DOCTYPE HTML>
-<!--
-	Editorial by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
-	<head>
-		<title>Generic - Sistema de Recomendação</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<head>
+    <title>Generic - Sistema de Recomendação</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Estilo para o botão */
+        #header {
+            display: flex;
+            align-items: center;
+        }
+        .menu-button {
+            font-size: 1em;
+            margin-right: 5px;
+            padding: 8px 8px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .menu-button:hover {
+            background-color: #555;
+        }
+        .logo {
+            font-size: 1.5em;
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
+        <!-- Main -->
+        <div id="main">
+            <div class="inner">
 
-							<!-- Header -->
-								<header id="header">
-									<a href="index.html" class="logo"><strong>Sistema de Recomendação</strong> by Ricardo Amaral</a>
-								</header>
+                <!-- Header -->
+                <header id="header">
+                    <!-- Adicionando o botão "Voltar ao Menu" -->
+                    <a href="index.html" class="menu-button">Voltar ao Menu</a>
+                </header>
 
-							<!-- Content -->
-								<section>
-									<header class="main">
-										<h1>Processamento de Linguagem Natural (PLN) para Extrair Recomendações a Partir das Descrições Textuais dos Produtos</h1>
-									</header>
+                <!-- Content -->
+                <section>
+                    <header class="main">
+						<h3>Sistema de Recomendação by Ricardo Amaral</h3>
+                        <h1>Processamento de Linguagem Natural (PLN) para Extrair Recomendações a Partir das Descrições Textuais dos Produtos</h1>
+                    </header>
 
-									<span class="image main"><img src="images/amazonrecomenda.jpg" alt=""width="300" height="400" /></span>
+                    <span class="image main"><img src="images/amazonrecomenda.jpg" alt="" width="300" height="400" /></span>
 
-									<p style="text-align: center; color: #888; font-size: 0.9em;">
-										Foto de <a href="https://unsplash.com/pt-br/@christianw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color: #888;">Christian Wiediger</a> na <a href="https://unsplash.com/pt-br/fotografias/smartphone-samsung-galaxy-preto-exibindo-o-logotipo-da-amazon-rymh7EZPqRs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color: #888;">Unsplash</a>
-									</p>
-									<p>Este projeto é um sistema de recomendação de produtos utilizando um dataset da Amazon, baseado em técnicas de ciência de dados e aprendizado de máquina. O foco principal está na utilização de Processamento de Linguagem Natural (PLN) para extrair recomendações a partir das descrições textuais dos produtos. As técnicas de PLN são empregadas para analisar e transformar o texto dos produtos em uma forma que possibilite a comparação e recomendação de produtos semelhantes. O processo segue o modelo CRISP-DM, uma metodologia padrão para a mineração de dados, adaptada para transformar dados textuais em recomendações relevantes.</p>
+                    <p style="text-align: center; color: #888; font-size: 0.9em;">
+                        Foto de <a href="https://unsplash.com/pt-br/@christianw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color: #888;">Christian Wiediger</a> na <a href="https://unsplash.com/pt-br/fotografias/smartphone-samsung-galaxy-preto-exibindo-o-logotipo-da-amazon-rymh7EZPqRs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" style="color: #888;">Unsplash</a>
+                    </p>
+                    <p>Este projeto é um sistema de recomendação de produtos utilizando um dataset da Amazon, baseado em técnicas de ciência de dados e aprendizado de máquina. O foco principal está na utilização de Processamento de Linguagem Natural (PLN) para extrair recomendações a partir das descrições textuais dos produtos. As técnicas de PLN são empregadas para analisar e transformar o texto dos produtos em uma forma que possibilite a comparação e recomendação de produtos semelhantes. O processo segue o modelo CRISP-DM, uma metodologia padrão para a mineração de dados, adaptada para transformar dados textuais em recomendações relevantes.</p>
 
-									<hr class="major" />
+                    <hr class="major" />
 
-									<h2>1. Entendimento do Negócio</h2>
-									<p>O objetivo deste projeto é desenvolver um sistema de recomendação que sugira produtos semelhantes com base nas preferências do usuário. Isso é útil para ajudar os consumidores a encontrar produtos relacionados e aumentar a satisfação e as vendas.</p>
+                    <h2>1. Entendimento do Negócio</h2>
+                    <p>O objetivo deste projeto é desenvolver um sistema de recomendação que sugira produtos semelhantes com base nas preferências do usuário. Isso é útil para ajudar os consumidores a encontrar produtos relacionados e aumentar a satisfação e as vendas.</p>
 
-									<hr class="major" />
+                    <hr class="major" />
 
-									<h2>2. Entendimento dos Dados</h2>
-									<p>Os dados são obtidos de um arquivo CSV que contém informações sobre produtos, incluindo:</p>
-									<ul>
-										<li>product_id: Identificador único do produto.</li>
-										<li>product_name: Nome do produto.</li>
-										<li>category: Categoria do produto.</li>
-										<li>about_product: Descrição do produto.</li>
-										<li>review_title: Título da avaliação.</li>
-										<li>review_content: Conteúdo da avaliação.</li>
-									</ul>
+                    <h2>2. Entendimento dos Dados</h2>
+                    <p>Os dados são obtidos de um arquivo CSV que contém informações sobre produtos, incluindo:</p>
+                    <ul>
+                        <li>product_id: Identificador único do produto.</li>
+                        <li>product_name: Nome do produto.</li>
+                        <li>category: Categoria do produto.</li>
+                        <li>about_product: Descrição do produto.</li>
+                        <li>review_title: Título da avaliação.</li>
+                        <li>review_content: Conteúdo da avaliação.</li>
+                    </ul>
 
-									<h3>Objetivo</h3> 
-									<p>Transformar essas informações em uma forma que possa ser usada para calcular a similaridade entre produtos e gerar recomendações. </p>
+                    <span class="image main"><img src="images/dataset_amazon.png" alt=""width="400" height="400" /></span>
 
-									<hr class="major" />
+                    <h3>Objetivo</h3> 
+                    <p>Transformar essas informações em uma forma que possa ser usada para calcular a similaridade entre produtos e gerar recomendações. </p>
 
-									<h2>3. Preparação dos Dados</h2>
-									<h3>Processamento de Texto</h3>
+                    <hr class="major" />
 
-									<ul>
-										<li>Tokenização: Divide o texto em palavras.</li>
-										<li>Stemming: Reduz as palavras às suas raízes para padronizar o texto.</li>
-										<li>Criação de Tags: Combina informações de diferentes colunas para criar uma representação textual unificada dos produtos.</li>
-									</ul>
+                    <h2>3. Preparação dos Dados</h2>
+                    <h3>Processamento de Texto</h3>
 
-									<hr class="major" />
+                    <ul>
+                        <li>Tokenização: Divide o texto em palavras.</li>
+                        <span class="image main"><img src="images/TOKENIZACAO.png" alt=""width="10" height="400" /></span>
+                        <li>Stemming: Reduz as palavras às suas raízes para padronizar o texto.</li>
+                        <p>Exemplo: [correr, caminhando, caminhava] em [corr, caminh, caminh] .</li>
+                        <li>Criação de Tags: Combina informações de diferentes colunas para criar uma representação textual unificada dos produtos.</li>
+                    </ul>
 
-									<h2>4. Modelagem</h2>
-									<ul>
-										<li>Vetorização de Texto: Utiliza o CountVectorizer para transformar descrições dos produtos em vetores.</li>
-										<li>Cálculo de Similaridade: Calcula a similaridade entre produtos usando a métrica de similaridade do cosseno, o que permite identificar produtos similares com base na sua descrição.</li>
-										<li>Recomendação: Com base na similaridade calculada, o sistema sugere produtos semelhantes ao selecionado pelo usuário.</li>
-									</ul>
+                    <hr class="major" />
 
-									<hr class="major" />
-									<h2>5. Avaliação</h2>
-									<p>O modelo é avaliado com base na qualidade das recomendações geradas. As recomendações são verificadas para garantir que os produtos sugeridos sejam realmente relevantes e semelhantes ao produto escolhido pelo usuário.</p>
+                    <h2>4. Modelagem</h2>
+                    <ul>
+                        <li>Vetorização de Texto: Utiliza o CountVectorizer para transformar descrições dos produtos em vetores.</li>
+                        <p>Exemplo de vetor: [0,0,0,1,0,0,1,0,0,0].</p>
+                        <li>Cálculo de Similaridade: Calcula a similaridade entre produtos usando a métrica de similaridade do cosseno, o que permite identificar produtos similares com base na sua descrição.</li>
+                        <li>Recomendação: Com base na similaridade calculada, o sistema sugere produtos semelhantes ao selecionado pelo usuário.</li>
+                    </ul>
 
-									<hr class="major" />
-									<h2>6. Implementação</h2>
-									<p>O aplicativo é implementado com Streamlit, que fornece uma interface interativa para o usuário.</p>
-									<ul class="actions">
-										<li><a href="https://sistemarecomendacao.streamlit.app/" class="button">Saiba Mais...</a></li>
-									</ul>
+                    <hr class="major" />
+                    <h2>5. Avaliação</h2>
+                    <p>O modelo é avaliado com base na qualidade das recomendações geradas. As recomendações são verificadas para garantir que os produtos sugeridos sejam realmente relevantes e semelhantes ao produto escolhido pelo usuário.</p>
 
+                    <hr class="major" />
+                    <h2>6. Implementação</h2>
+                    <p>O aplicativo é implementado com Streamlit, que fornece uma interface interativa para o usuário.</p>
+                    <span class="image main"><img src="images/streamlitsr.png" alt=""width="400" height="400" /></span>
+                    <ul class="actions">
+                        <li><a href="https://sistemarecomendacao.streamlit.app/" class="button">Visualização no Streamlit.io</a></li>
+                    </ul>
+                </section>
 
-								
-								</section>
+            </div>
+        </div>
 
-						</div>
-					</div>
+    </div>
 
-
-	</body>
+</body>
 </html>

@@ -79,6 +79,8 @@
                         <li>review_content: Conteúdo da avaliação.</li>
                     </ul>
 
+                    <span class="image main"><img src="images/dataset_amazon.png" alt=""width="400" height="400" /></span>
+
                     <h3>Objetivo</h3> 
                     <p>Transformar essas informações em uma forma que possa ser usada para calcular a similaridade entre produtos e gerar recomendações. </p>
 
@@ -89,7 +91,9 @@
 
                     <ul>
                         <li>Tokenização: Divide o texto em palavras.</li>
+                        <span class="image main"><img src="images/TOKENIZACAO.png" alt=""width="10" height="400" /></span>
                         <li>Stemming: Reduz as palavras às suas raízes para padronizar o texto.</li>
+                        <p>Exemplo: [correr, caminhando, caminhava] em [corr, caminh, caminh] .</li>
                         <li>Criação de Tags: Combina informações de diferentes colunas para criar uma representação textual unificada dos produtos.</li>
                     </ul>
 
@@ -98,6 +102,7 @@
                     <h2>4. Modelagem</h2>
                     <ul>
                         <li>Vetorização de Texto: Utiliza o CountVectorizer para transformar descrições dos produtos em vetores.</li>
+                        <p>Exemplo de vetor: [0,0,0,1,0,0,1,0,0,0].</p>
                         <li>Cálculo de Similaridade: Calcula a similaridade entre produtos usando a métrica de similaridade do cosseno, o que permite identificar produtos similares com base na sua descrição.</li>
                         <li>Recomendação: Com base na similaridade calculada, o sistema sugere produtos semelhantes ao selecionado pelo usuário.</li>
                     </ul>
@@ -109,6 +114,7 @@
                     <hr class="major" />
                     <h2>6. Implementação</h2>
                     <p>O aplicativo é implementado com Streamlit, que fornece uma interface interativa para o usuário.</p>
+                    <span class="image main"><img src="images/streamlitsr.png" alt=""width="400" height="400" /></span>
                     <ul class="actions">
                         <li><a href="https://sistemarecomendacao.streamlit.app/" class="button">Visualização no Streamlit.io</a></li>
                     </ul>
